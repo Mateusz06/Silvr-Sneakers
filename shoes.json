@@ -1,0 +1,32 @@
+{
+    "shoes": [
+      {
+        "id": 1,
+        "name": "Nike Air Max 90",
+        "brand": "Nike",
+        "size": [7, 8, 9, 10, 11],
+        "color": "White/Red/Black",
+        "price": 120,
+        "available": true
+      },
+      {
+        "id": 2,
+        "name": "Adidas Ultraboost 22",
+        "brand": "Adidas",
+        "size": [6, 7, 8, 9, 10],
+        "color": "Core Black/White",
+        "price": 180,
+        "available": true
+      },
+      {
+        "id": 5,
+        "name": "Reebok Classic Leather",
+        "brand": "Reebok",
+        "size": [6, 7, 8, 9, 10],
+        "color": "White/Green",
+        "price": 75,
+        "available": true
+      }
+    ]
+  }
+  

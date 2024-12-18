@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    max-width: 58.5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.brand-name:hover {
+    color: #000;
+    text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.main-container {
+    display: flex;
+    max-width: 60%;
+    margin: 30px auto 0;  /* Adjust for navbar height */
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #ffffff; /* Keep the background white */
+    border-radius: 12px;
+    margin-top: 80px;
+    transition: box-shadow 0.3s ease-in-out;
+    /* Removed box-shadow for a cleaner look */
+    box-shadow: none;  /* No shadow for a flatter design */
+}
+
+.filter-group {
+    margin-bottom: 15px;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group summary {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    padding: 12px 0;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.filter-group summary:hover {
+    color: #111;
+}
+
+.filter-group summary::-webkit-details-marker {
+    display: none;
+}
+
+.filter-group summary::after {
+    content: '\276F'; /* Thin downward arrow (▾) */
+    font-size: 1rem;
+    color: #777;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+    color: #333;
+}
+
+/* Price range section styling */
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between the elements */
+    margin-top: 10px;
+}
+
+.price-range label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+.price-input {
+    width: 80px; /* Adjusted width for a better layout */
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0;
+    text-align: right; /* Align the text to the right */
+}
+
+.price-input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Remove list bullets */
+.filter-group ul {
+    list-style-type: none; /* Removes the dots (bullets) */
+    padding-left: 0; /* Remove indentation */
+    margin: 0; /* Remove default margin */
+}
+
+.filter-group li {
+    margin: 6px 0; /* Reduced spacing between list items */
+}
+
+/* Optional: Increase the font size of the summary for better accessibility */
+.filter-group summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 12px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.filter-group summary:hover {
+    color: #111;
+}
+
+.filter-group summary::-webkit-details-marker {
+    display: none;
+}
+
+.filter-group summary::after {
+    content: '\276F'; /* Thin downward arrow (▾) */
+    font-size: 1rem;
+    color: #777;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+    color: #333;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller minimum card size */
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;  /* Ensure it takes full width of its grid cell */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;  /* Reduced height for a smaller image */
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    padding: 10px;  /* Reduced padding for a smaller card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-name {
+    font-size: 18px;  /* Smaller font size for brand name */
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 13px;  /* Reduced font size for description */
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.product-subdescription {
+    font-size: 12px;  /* Reduced font size for subdescription */
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.add-to-cart {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px;  /* Reduced padding for the button */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;  /* Smaller font size for the button */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}

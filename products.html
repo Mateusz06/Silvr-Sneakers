@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvr Sneakers</title>
+    <link rel="stylesheet" href="products.css">
+    <script src="products.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-name">Silvr Sneakers</a>
+            <ul class="nav-links">
+                <li><a href="products.html">Men</a></li>
+                <li><a href="hydraRS.html">Woman</a></li>
+                <li><a href="#services">Sale</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Filters</h3>
+
+            <details class="filter-group">
+                <summary>Brand</summary>
+                <ul>
+                    <li><label><input type="checkbox"> Nike</label></li>
+                    <li><label><input type="checkbox"> Adidas</label></li>
+                    <li><label><input type="checkbox"> New Balance</label></li>
+                    <li><label><input type="checkbox"> Asics</label></li>
+                </ul>
+            </details>
+
+            <details class="filter-group">
+                <summary>Gender</summary>
+                <ul>
+                    <li><label><input type="checkbox"> Male</label></li>
+                    <li><label><input type="checkbox"> Female</label></li>
+                </ul>
+            </details>
+
+            <details class="filter-group">
+                <summary>Color</summary>
+                <ul>
+                    <li><label><input type="checkbox"> Red</label></li>
+                    <li><label><input type="checkbox"> Blue</label></li>
+                    <li><label><input type="checkbox"> Black</label></li>
+                    <li><label><input type="checkbox"> White</label></li>
+                    <li><label><input type="checkbox"> Green</label></li>
+                </ul>
+            </details>
+
+            <details class="filter-group">
+                <summary>Size</summary>
+                <ul>
+                    <li><label><input type="checkbox"> 7</label></li>
+                    <li><label><input type="checkbox"> 8</label></li>
+                    <li><label><input type="checkbox"> 9</label></li>
+                    <li><label><input type="checkbox"> 10</label></li>
+                    <li><label><input type="checkbox"> 11</label></li>
+                </ul>
+            </details>
+
+            <details class="filter-group">
+                <summary>Price</summary>
+                <div class="price-range">
+                    <label for="min-price">Min €</label>
+                    <input type="number" id="min-price" placeholder="0" class="price-input">
+                    <label for="max-price">Max €</label>
+                    <input type="number" id="max-price" placeholder="1000+" class="price-input">
+                </div>
+            </details>
+        </div>
+
+        <div class="product-cards">
+
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="products-images/products1image.jpg" alt="Product Image" class="product-image">
+                    <div class="product-info">
+                        <h3 class="brand-name">Nike</h3>
+                        <p class="product-description">The Nike Air Max offers unmatched comfort for everyday wear.</p>
+                        <p class="product-subdescription">Stylish and perfect for running or casual outings.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+</body>
+
+</html>
