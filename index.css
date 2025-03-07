@@ -134,7 +134,6 @@ body {
 /* Featured Collection Section */
 .featured-collection {
     margin-top: 7.5rem;
-    margin-bottom: 20rem;
     text-align: left;
 }
 
@@ -155,83 +154,227 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0px;
+    gap: 0.8rem;
     flex-wrap: wrap;
 }
 
 .card {
-    background: linear-gradient(135deg, #f0f0f0, #ffffff);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    border-radius: 1.2rem;
     overflow: hidden;
     margin: 0;
-    width: 100%;
-    max-width: 455px; /* Middle ground max-width */
+    max-width: 32%;
+    min-width: 32%;
     position: relative;
-    display: flex;
     flex-direction: row;
     margin-bottom: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding-bottom: 1rem;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-image-container {
-    margin-top: 3rem;
-    width: 40%; 
+    width: 100%;
+    height: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.4rem;
+    background-color: rgba(161, 161, 161, 0.24);
 }
 
 .card-image {
-    width: 100%;
-    height: auto;
+    width: 85%;
+    max-height: 12rem;
+    object-fit: cover;
+    justify-content: center;
     display: block;
-    border-radius: 8px;
+    border-radius: 1.2rem;
+}
+
+.bookmark-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #000000;
+    border-radius: 50%;
+    padding-right: 0.3rem;
+    cursor: pointer;
+    --ggs: 1.2;
+}
+
+.bookmark-icon i {
+    margin: 0;
+}
+
+.bookmark-icon:hover {
+    opacity: 0.8;
 }
 
 .card-content {
-    padding: 14px; /* Slightly increased padding */
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
+    padding-left: 0.4rem;
 }
 
 .card-title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #333;
-    margin: 12px 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000000;
+    margin: 0.5rem 0;
     text-transform: uppercase;
 }
 
-.card-description {
-    font-size: 0.95rem;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.card-btn {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    align-self: flex-start;
-    border: 1px solid #000000;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    margin-top: auto;
-}
-
-.card-btn:hover {
-    background-color: #ffffff;
+.card-title2 {
+    font-size: 1rem;
+    font-weight: 600;
     color: #000000;
-    border: 1px solid #000000;
+    margin: -0.5rem 0;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.JD-collection-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.JD-section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.JD-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    margin-bottom: 10rem;
+}
+
+.JD-big-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.JD-big-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.JD-big-card-title {
+    color: white;
+    text-shadow: #ffffff 0px 0px 3px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    z-index: 1;
+    padding-top: 2rem;
+    margin-bottom: 0;
+    padding-left: 2rem;
+}
+
+.JD-big-card-description {
+    color: white;
+    text-shadow: #ffffff 0px 0px 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1;
+    padding-left: 2rem;
+}
+
+.JD-big-card-arrow {
+    position: absolute;
+    bottom: 1.55rem;
+    right: 2rem;
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+    --ggs: 1.5;
+}
+
+.JD-big-card-arrow:hover {
+    opacity: 0.8;
+    /* box-shadow: #ffffff 0px 0px 10px; */
+}
+
+.JD-small-cards {
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+}
+
+.JD-small-card {
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding-left: 20px; */
+    font-size: 18px;
+    font-weight: bold;
+    height: 18rem;
+    width: 49%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.JD-small-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.JD-small-card-title {
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 0px 0px 6px;
+    font-size: 1.4rem;
+    z-index: 1;
+    margin-top: 13.5rem;
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.JD-small-card-description {
+    color: white;
+    text-shadow: #000000 0px 0px 6px;
+    font-size: 1rem;
+    z-index: 1;
+    padding-left: 1.5rem;
+}
+
+.JD-small-card-arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    color: white;
+    z-index: 2;
+    cursor: pointer;
+    --ggs: 1.2;
+}
+
+.JD-small-card-arrow:hover {
+    opacity: 0.8;
 }
